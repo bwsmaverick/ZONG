@@ -43,8 +43,8 @@ set<pair<COutPoint, unsigned int> > setStakeSeen;
 CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 
 int nStakeMinConfirmations = 10;
-unsigned int nStakeMinAge = 3 * 60 * 60; // 3 hours
-unsigned int nStakeMaxAge = 15 * (60 * 60 * 24); // 15 days
+unsigned int nStakeMinAge = 4 * 60 * 60; //4 hours
+unsigned int nStakeMaxAge = 10 * (60 * 60 * 24); // 10 days
 unsigned int nModifierInterval = 10 * 60; // time to elapse before new modifier is computed
 
 int nCoinbaseMaturity = 10;
@@ -976,13 +976,13 @@ int64_t GetProofOfWorkReward(int64_t nFees)
 
 	// Premine 25M
 	if(pindexBest->nHeight+1 == 1) {
-		nSubsidy = 2999000 * COIN;
+		nSubsidy = 1 * COIN;
 	} else if (pindexBest->nHeight+1 > 1 && pindexBest->nHeight+1 <= 10) {
-		nSubsidy = 10 * COIN;
+		nSubsidy = 1000 * COIN;
 	} else if (pindexBest->nHeight+1 > 10 && pindexBest->nHeight+1 <= 50) {
-		nSubsidy = 10 * COIN;
+		nSubsidy = 24500 * COIN;
 	} else if (pindexBest->nHeight+1 > 50 && pindexBest->nHeight+1 <= 100) {
-		nSubsidy = 10 * COIN;
+		nSubsidy = 380 * COIN;
 	} else {
 		nSubsidy = 1 * COIN;
 	}
