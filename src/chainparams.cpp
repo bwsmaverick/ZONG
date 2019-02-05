@@ -72,9 +72,9 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 1542957092;
+        genesis.nTime    = ;
         genesis.nBits    = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce   = 12974417;
+        genesis.nNonce   = ;
 		
 		
 /*
@@ -91,14 +91,14 @@ Block is: CBlock(hash=0000013a7c8f2442bb9f43b11c84f3d8a6a9785465d8740138b08c0378
 
         hashGenesisBlock = genesis.GetHash();
 
-        assert(hashGenesisBlock == uint256("0x0000013a7c8f2442bb9f43b11c84f3d8a6a9785465d8740138b08c037807478e"));
-        assert(genesis.hashMerkleRoot == uint256("0x17535e50176c1dc1d0d8c801021182f395897ffe3c2e5fe016b4f1b81da8b9a6"));
+        assert(hashGenesisBlock == uint256("0x"));
+        assert(genesis.hashMerkleRoot == uint256("0x"));
                 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 28); // C
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 87); // c
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 80); // Z
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 142); // z
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1, 45); // K
-        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0x59)(0x12).convert_to_container<std::vector<unsigned char> >();
-        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xa5)(0x38).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0x51)(0x17).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xf5)(0xb8).convert_to_container<std::vector<unsigned char> >();
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
@@ -140,7 +140,7 @@ public:
 
         // Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nBits  = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce = 65510;
+        genesis.nNonce = ;
 		
         hashGenesisBlock = genesis.GetHash();
 		
