@@ -67,14 +67,14 @@ public:
         vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         vout[0].nValue = 0;
         vout[0].scriptPubKey = CScript() << ParseHex("04c629dd47950d15c4f63db4e67247335e09dec8b4ca4c157a23858e2503709e5fe3ba75d5b5263b046ae4b20af135a4dc79e66123ad9a15e65a98798bfee60724") << OP_CHECKSIG;
-        CTransaction txNew(1, 1542957092, vin, vout, 0);
+        CTransaction txNew(1, 1549385191, vin, vout, 0);
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = ;
+        genesis.nTime    = 1549385191;
         genesis.nBits    = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce   = ;
+        genesis.nNonce   = 0;
 		
 		
 /*
@@ -140,7 +140,7 @@ public:
 
         // Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nBits  = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce = ;
+        genesis.nNonce = 0;
 		
         hashGenesisBlock = genesis.GetHash();
 		
