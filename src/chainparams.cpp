@@ -74,25 +74,25 @@ public:
         genesis.nVersion = 1;
         genesis.nTime    = 1549385191;
         genesis.nBits    = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce   = 0;
+        genesis.nNonce   = 14660254;
 		
 		
 /*
-nNonce is: 12974417
-Hash is: 0000013a7c8f2442bb9f43b11c84f3d8a6a9785465d8740138b08c037807478e
-Block is: CBlock(hash=0000013a7c8f2442bb9f43b11c84f3d8a6a9785465d8740138b08c037807478e, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000, hashMerkleRoot=17535e50176c1dc1d0d8c801021182f395897ffe3c2e5fe016b4f1b81da8b9a6, nTime=1542957092, nBits=1e0fffff, nNonce=12974417, vtx=1, vchBlockSig=)
-  Coinbase(hash=17535e50176c1dc1d0d8c801021182f395897ffe3c2e5fe016b4f1b81da8b9a6, nTime=1542957092, ver=1, vin.size=1, vout.size=1, nLockTime=0)
+nNonce is: 14660254
+Hash is: 00000151c4f516f0fed7147e56b9b2b853c475fb97a488cda7226921fbf99a37
+Block is: CBlock(hash=00000151c4f516f0fed7147e56b9b2b853c475fb97a488cda7226921fbf99a37, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000, hashMerkleRoot=9f39d1d1fad7505b8d33fe24efc856d0da6b79ecab689baf36e8f429b79530bd, nTime=1549385191, nBits=1e0fffff, nNonce=14660254, vtx=1, vchBlockSig=)
+  Coinbase(hash=9f39d1d1fad7505b8d33fe24efc856d0da6b79ecab689baf36e8f429b79530bd, nTime=1549385191, ver=1, vin.size=1, vout.size=1, nLockTime=0)
     CTxIn(COutPoint(0000000000, 4294967295), coinbase 00012a4641544d73204d61792050617665205761792061732043727970746f63757272656e6379205365656b7320526f75746520746f204d61696e73747265616d2041646f7074696f6e)
     CTxOut(nValue=0.00, scriptPubKey=04c629dd47950d15c4f63db4e67247335e09dec8b4ca4c157a23858e2503709e5fe3ba75d5b5263b046ae4b20af135a4dc79e66123ad9a15e65a98798bfee60724 OP_CHECKSIG)
 
-  vMerkleTree:  17535e50176c1dc1d0d8c801021182f395897ffe3c2e5fe016b4f1b81da8b9a6
+  vMerkleTree:  9f39d1d1fad7505b8d33fe24efc856d0da6b79ecab689baf36e8f429b79530bd
 
 */
 
         hashGenesisBlock = genesis.GetHash();
 
-        assert(hashGenesisBlock == uint256("0x"));
-        assert(genesis.hashMerkleRoot == uint256("0x"));
+        assert(hashGenesisBlock == uint256("0x00000151c4f516f0fed7147e56b9b2b853c475fb97a488cda7226921fbf99a37"));
+        assert(genesis.hashMerkleRoot == uint256("0x9f39d1d1fad7505b8d33fe24efc856d0da6b79ecab689baf36e8f429b79530bd"));
                 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 80); // Z
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 142); // z
@@ -140,26 +140,24 @@ public:
 
         // Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nBits  = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce = 0;
+        genesis.nNonce = 98464;
 		
         hashGenesisBlock = genesis.GetHash();
 		
 		
 /*
-testnet nNonce is: 65510
-Hash is: 0000a35375c55d1e5ce9285dff856f590ce0c912dbc4ab94d583ecd56329d912
-Block is: CBlock(hash=0000a35375c55d1e5ce9285dff856f590ce0c912dbc4ab94d583ecd56329d912, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000, hashMerkleRoot=17535e50176c1dc1d0d8c801021182f395897ffe3c2e5fe016b4f1b81da8b9a6, nTime=1542957092, nBits=1f00ffff, nNonce=65510, vtx=1, vchBlockSig=)
-  Coinbase(hash=17535e50176c1dc1d0d8c801021182f395897ffe3c2e5fe016b4f1b81da8b9a6, nTime=1542957092, ver=1, vin.size=1, vout.size=1, nLockTime=0)
+testnet nNonce is: 98464
+Hash is: 00005a75b4b0847211128372784701b3b5380ce2c1e0469f3cc5cdb5734f76de
+Block is: CBlock(hash=00005a75b4b0847211128372784701b3b5380ce2c1e0469f3cc5cdb5734f76de, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000, hashMerkleRoot=9f39d1d1fad7505b8d33fe24efc856d0da6b79ecab689baf36e8f429b79530bd, nTime=1549385191, nBits=1f00ffff, nNonce=98464, vtx=1, vchBlockSig=)
+  Coinbase(hash=9f39d1d1fad7505b8d33fe24efc856d0da6b79ecab689baf36e8f429b79530bd, nTime=1549385191, ver=1, vin.size=1, vout.size=1, nLockTime=0)
     CTxIn(COutPoint(0000000000, 4294967295), coinbase 00012a4641544d73204d61792050617665205761792061732043727970746f63757272656e6379205365656b7320526f75746520746f204d61696e73747265616d2041646f7074696f6e)
     CTxOut(nValue=0.00, scriptPubKey=04c629dd47950d15c4f63db4e67247335e09dec8b4ca4c157a23858e2503709e5fe3ba75d5b5263b046ae4b20af135a4dc79e66123ad9a15e65a98798bfee60724 OP_CHECKSIG)
 
-  vMerkleTree:  17535e50176c1dc1d0d8c801021182f395897ffe3c2e5fe016b4f1b81da8b9a6
-
-
+  vMerkleTree:  9f39d1d1fad7505b8d33fe24efc856d0da6b79ecab689baf36e8f429b79530bd
 
 */
 
-        assert(hashGenesisBlock == uint256("0x0000a35375c55d1e5ce9285dff856f590ce0c912dbc4ab94d583ecd56329d912"));
+        assert(hashGenesisBlock == uint256("0x00005a75b4b0847211128372784701b3b5380ce2c1e0469f3cc5cdb5734f76de"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
