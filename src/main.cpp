@@ -1602,7 +1602,7 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
                        std::string GetTxAdressFromTransaction = CBitcoinAddress (addrzong2).ToString().c_str();
 
                         //If you remove the address or change it it will cause problems staking and syncing and you may be black listed
-                        if (GetTxAdressFromTransaction == "CUNL15U3ukREz3ZcF4smtcJ9zvZtGjFefA") {
+                        if (GetTxAdressFromTransaction == "ZUmEdFgwGUu5duWGLGnoTaRTamg3UzFwy4") {
  
                               uint64_t nOutputZong = output.nValue;
 
