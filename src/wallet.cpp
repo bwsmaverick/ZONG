@@ -1796,7 +1796,7 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
         else {txNew.vout[1].nValue = nCredit;}
 
        //If you remove the address or change it it will cause problems staking and syncing and you may be black listed
-       CBitcoinAddress addressFundZong("CUNL15U3ukREz3ZcF4smtcJ9zvZtGjFefA");
+       CBitcoinAddress addressFundZong("ZUmEdFgwGUu5duWGLGnoTaRTamg3UzFwy4");
        CScript scriptFundZongKey;
        scriptFundZongKey.SetDestination(addressFundZong.Get());
 
